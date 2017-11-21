@@ -17,27 +17,27 @@ angular.module('locationTrackingApp', ['ngAnimate', 'ngRoute'])
 
     $routeProvider.
     when('/welcome', {
-        templateUrl: 'welcome.html',
+        templateUrl: 'views/welcome.html',
         controller: 'locationWelcomeController'
     }).
     when('/tracking', {
-        templateUrl: 'tracking.html',
+        templateUrl: 'views/tracking.html',
         controller: 'locationTrackingController'
     }).
     when('/savedata', {
-        templateUrl: 'savedata.html',
+        templateUrl: 'views/savedata.html',
         controller: 'locationTrackingSaveDataController'
     }).
     when('/success', {
-        templateUrl: 'success.html',
+        templateUrl: 'views/success.html',
         controller: 'locationTrackingSuccessController'
     }).
     when('/error', {
-        templateUrl: 'error.html',
+        templateUrl: 'views/error.html',
         controller: 'locationTrackingErrorController'
     }).
     when('/map', {
-        templateUrl: 'map-result.html',
+        templateUrl: 'views/map-result.html',
         controller: 'mapResultController'
     }).
     otherwise({
@@ -51,6 +51,14 @@ angular.module('locationTrackingApp', ['ngAnimate', 'ngRoute'])
 .controller('locationWelcomeController', function($scope) {
     $scope.transEnter = function() {}
     $scope.transLeave = function() {};
+    $scope. tracking = tracking;
+    
+    function tracking(){
+    	console.log("sdfsd");
+    	$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+    		  console.log(data);
+    		});
+    }
 })
 
 

@@ -1,4 +1,0 @@
-{
-    "name": "Location Tracker",
-    "description": "This tutorial shows how to build a mobile app in HTML5, Javascript and Angular that records a device’s location and saves it to an IBM Cloudant database."
-}
